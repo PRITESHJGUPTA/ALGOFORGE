@@ -2,7 +2,7 @@
 #include<vector>
 #include<stdexcept>
 using namespace std;
-template<typename T>
+
 class TreeNode
 {
 	
@@ -19,7 +19,7 @@ class TreeNode
 		friend class GenrealBinaryTree;
 };
 
-
+template<typename T>
 class Stack
 {
 	private:
@@ -199,6 +199,12 @@ class GeneralBinaryTree
 						{
 							s2.push(temp);
 							cout<<temp->data<<"\t";
+							if(temp->left != NULL)
+							{
+								temp=temp->left;
+								s2.push(temp);
+								cout<<temp->data<<"\t";
+							}
 						}
 					}
 				
